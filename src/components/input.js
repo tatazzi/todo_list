@@ -1,19 +1,21 @@
 import React from 'react';
 import {TextInput, StyleSheet} from 'react-native';
 
-// import { Container } from './styles';
-
-const Input = () => {
+const Input = ({onChangeText, value}) => {
   return (
-    <TextInput style={styles.input} placeholder="Digite uma nova tarefa" />
+    <TextInput
+      autoCorrect={false}
+      onChangeText={onChangeText}
+      value={value}
+      style={styles.input}
+      placeholder="Digite uma nova tarefa"
+    />
   );
 };
 
 const styles = StyleSheet.create({
   input: {
-    width: '80%',
     height: 52,
-    margin: 12,
     borderWidth: 1,
     padding: 10,
     borderRadius: 5,
